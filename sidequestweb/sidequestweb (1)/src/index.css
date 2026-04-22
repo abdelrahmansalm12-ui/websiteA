@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #b60055;
+  --color-primary-dim: #a0004a;
+  --color-primary-fixed: #ff719b;
+  --color-primary-fixed-dim: #ff528c;
+  --color-on-primary: #ffeff1;
+  --color-on-primary-container: #4c0020;
+
+  --color-secondary: #983670;
+  --color-secondary-container: #ffc0dd;
+  --color-on-secondary: #ffeff3;
+  --color-on-secondary-container: #7f215b;
+
+  --color-tertiary: #5a4bb4;
+  --color-tertiary-dim: #4e3ea7;
+  --color-tertiary-container: #b1a5ff;
+  --color-on-tertiary: #f6f0ff;
+  --color-on-tertiary-container: #2e1887;
+
+  --color-surface: #fff4f6;
+  --color-surface-dim: #ffc4df;
+  --color-surface-bright: #fff4f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ffecf2;
+  --color-surface-container: #ffe0ec;
+  --color-surface-container-high: #ffd8e8;
+  --color-surface-container-highest: #ffd0e4;
+
+  --color-on-surface: #492137;
+  --color-on-surface-variant: #7c4d65;
+  --color-outline: #9a6880;
+  --color-outline-variant: #d69db7;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-fixed) 100%);
+}
+
+.tonal-shadow {
+  box-shadow: 0 8px 16px -4px rgba(73, 33, 55, 0.1);
+}
+
+.glass-nav {
+  @apply bg-surface/80 backdrop-blur-xl border-none;
+}
